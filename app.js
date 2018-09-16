@@ -30,6 +30,12 @@ console.log(process.argv);
 var command = process.argv[2];
 console.log('Command',command);
 
+
+/*** TODO - node app.js list
+ * control flow for command in -> node app.js add => prints: adding new note
+ * control flow for command in -> node app.js list  => prints : listing all notes
+ * else prints -> command not recognized
+ */
 if( command == 'add'){
     console.log('adding new note')
 }else if (command == 'list'){
