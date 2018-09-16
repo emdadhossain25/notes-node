@@ -19,6 +19,10 @@ var user = os.userInfo();
 
 
 
+
+var filteredArray = _.uniq(['emdad',1,'emdad',1,2,3,4,5])
+console.log(filteredArray);
+
 console.log(user);
 fs.appendFile('greetings.txt',`Hello ${user.username}! `,function (err) {
     if (err)
