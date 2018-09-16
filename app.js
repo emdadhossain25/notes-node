@@ -4,10 +4,17 @@ const fs = require('fs');
 const os = require('os');
 const notes = require('./notes.js');
 
-var user = os.userInfo();
+var res = notes.addNote();
+console.log(res);
 
-console.log(user);
-fs.appendFile('greetings.txt',`Hello ${user.username}!`,function (err) {
-    if (err)
-        console.log('unable to write to file!');
-});
+var sum = notes.add(6,4);
+console.log(sum);
+
+
+// var user = os.userInfo();
+
+// console.log(user);
+// fs.appendFile('greetings.txt',`Hello ${user.username}! `,function (err) {
+//     if (err)
+//         console.log('unable to write to file!');
+// });
