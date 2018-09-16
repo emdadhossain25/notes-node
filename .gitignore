@@ -1,5 +1,6 @@
-    .idea/
-    .idea/jsLibraryMappings.xml
-    .idea/modules.xml
-    .idea/notes-node.iml
-    .idea/workspace.xml
+node_modules/
+.idea/
+.idea/jsLibraryMappings.xml
+.idea/modules.xml
+.idea/notes-node.iml
+.idea/workspace.xml
