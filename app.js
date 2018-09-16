@@ -18,6 +18,22 @@ console.log(_.isString('emdad'));
 
 
 
+
 var filteredArray = _.uniq(['emdad',1,'emdad',1,2,3,4,5])
 console.log(filteredArray);
 
+
+// argv= arguments vector
+console.log(process.argv);
+
+// calling node app.js list for checking the command line
+var command = process.argv[2];
+console.log('Command',command);
+
+if( command == 'add'){
+    console.log('adding new note')
+}else if (command == 'list'){
+    console.log('listing all notes')
+}else {
+    console.log('command not recongnized')
+}
