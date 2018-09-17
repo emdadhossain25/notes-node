@@ -28,7 +28,7 @@ console.log(filteredArray);
 
 
 // calling node app.js list for checking the command line
-var command = process.argv[2];
+var command = argv._[0];
 console.log('Command', command);
 
 /**
