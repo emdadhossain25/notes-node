@@ -5,6 +5,35 @@ var addNote = (title, body)=>{
 };
 
 
+/**
+ * function for getting all logs
+ */
+var getAll = () =>{
+
+    console.log('getting all log')
+};
+
+
+/**
+ * function for calling getting read
+ */
+var getNote = (title) =>{
+    console.log('getting node',title);
+}
+
+
+
+/**
+ * function for removing methods
+ */
+var removeNote = (title) =>{
+    console.log('removing node',title);
+}
+
+
 module.exports = {
-    addNote : addNote
+    addNote : addNote,
+    getAll : getAll,
+    getNote : getNote,
+    removeNote : removeNote
 }
