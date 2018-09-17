@@ -18,7 +18,7 @@ var getAll = () =>{
  * function for calling getting read
  */
 var getNote = (title) =>{
-    console.log('getting node',title);
+    console.log('getting note',title);
 }
 
 
@@ -27,7 +27,7 @@ var getNote = (title) =>{
  * function for removing methods
  */
 var removeNote = (title) =>{
-    console.log('removing node',title);
+    console.log('removing note',title);
 }
 
 
