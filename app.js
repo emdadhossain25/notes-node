@@ -11,7 +11,6 @@ const yargs = require('yargs');
 const argv = yargs.argv;
 
 
-
 // argv= arguments vector
 console.log(process.argv);
 
@@ -37,7 +36,6 @@ console.log('Command', command);
 console.log(process)
 
 
-
 /*** TODO - node app.js list
  * control flow for command in -> node app.js add => prints: adding new note
  * control flow for command in -> node app.js list  => prints : listing all notes
@@ -47,9 +45,9 @@ if (command == 'add') {
 
     var note = notes.addNote(argv.title, argv.body);
 
-    if (note === undefined){
+    if (note === undefined) {
         console.log('no note was added in the notes file');
-    }else {
+    } else {
 
         console.log('note was added in the notes file');
         console.log('-----');
@@ -62,8 +60,10 @@ if (command == 'add') {
 } else if (command === 'read') {
     notes.getNote(argv.title);
 }
-else if (command === 'remove'){
-    notes.removeNote(argv.title);
+else if (command === 'remove') {
+    var note = notes.removeNote(argv.title);
+
+    console.log(note)
 }
 
 else {
