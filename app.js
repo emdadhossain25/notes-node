@@ -52,6 +52,9 @@ if (command == 'add') {
     }else {
 
         console.log('note was added in the notes file');
+        console.log('-----');
+        console.log(`Title: ${note.title}`);
+        console.log(`body: ${note.body}`);
     }
 
 } else if (command == 'list') {

@@ -58,7 +58,12 @@ var getNote = (title) => {
  * function for removing methods
  */
 var removeNote = (title) => {
-    console.log('removing note', title);
+    //fetch the notes
+    var fetched_notes = fetchNotes();
+    //filter notes, removing the one with title of  argument or saving the others from existing file
+    var filteredNotes = fetched_notes.filter((note) => note.title !==title);
+    // save new notes array
+    saveNotes(filteredNotes);
 }
 
 
