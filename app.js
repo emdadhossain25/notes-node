@@ -45,7 +45,15 @@ console.log(process)
  */
 if (command == 'add') {
 
-    notes.addNote(argv.title, argv.body);
+    var note = notes.addNote(argv.title, argv.body);
+
+    if (note === undefined){
+        console.log('no note was added in the notes file');
+    }else {
+
+        console.log('note was added in the notes file');
+    }
+
 } else if (command == 'list') {
     notes.getAll();
 } else if (command === 'read') {
