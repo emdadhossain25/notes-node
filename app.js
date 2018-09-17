@@ -45,15 +45,11 @@ if (command == 'add') {
 
     var note = notes.addNote(argv.title, argv.body);
 
-    if (note === undefined) {
-        console.log('no note was added in the notes file');
-    } else {
+    if (note!==undefined){
 
-        console.log('note was added in the notes file');
-        console.log('-----');
-        console.log(`Title: ${note.title}`);
-        console.log(`body: ${note.body}`);
-    }
+    console.log(`Title: ${note.title} Body: ${note.body}`);
+    }else
+        console.log("No note was added")
 
 } else if (command == 'list') {
     notes.getAll();
@@ -63,7 +59,11 @@ if (command == 'add') {
 else if (command === 'remove') {
     var note = notes.removeNote(argv.title);
 
-    console.log(note)
+    if (note) {
+
+        console.log("A note was removed")
+    } else
+        console.log("No note removed")
 }
 
 else {

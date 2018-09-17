@@ -65,7 +65,7 @@ var removeNote = (title) => {
     // save new notes array
     saveNotes(filteredNotes);
 
-    return filteredNotes;
+    return fetched_notes.length!==filteredNotes.length
 }
 
 
