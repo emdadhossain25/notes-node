@@ -6,8 +6,17 @@ const _ = require('lodash');
 
 const notes = require('./notes.js');
 
-var res = notes.addNote();
-console.log(res);
+
+const yargs = require('yargs');
+const argv = yargs.argv;
+
+
+
+// argv= arguments vector
+console.log(process.argv);
+
+// argument from yargs
+console.log(argv);
 
 
 console.log(_.isString(true));
@@ -17,9 +26,6 @@ console.log(_.isString('emdad'));
 var filteredArray = _.uniq(['emdad', 1, 'emdad', 1, 2, 3, 4, 5])
 console.log(filteredArray);
 
-
-// argv= arguments vector
-console.log(process.argv);
 
 // calling node app.js list for checking the command line
 var command = process.argv[2];
@@ -38,7 +44,8 @@ console.log(process)
  * else prints -> command not recognized
  */
 if (command == 'add') {
-    console.log('adding new note')
+
+    notes.addNote(argv.title, argv.body);
 } else if (command == 'list') {
     console.log('listing all notes')
 } else if (command === 'read') {
