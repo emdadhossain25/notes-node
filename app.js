@@ -47,7 +47,7 @@ if (command == 'add') {
 
     if (note!==undefined){
 
-    console.log(`Title: ${note.title} Body: ${note.body}`);
+        notes.logNote(note);
     }else
         console.log("No note was added")
 

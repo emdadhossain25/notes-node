@@ -57,6 +57,13 @@ var getNote = (title) => {
 }
 
 
+var logNote = (note) =>{
+    //adding a debugger for testing repl
+    debugger;
+    console.log('----------');
+    console.log(`Title: ${note.title} Body: ${note.body}`);
+}
+
 /**
  * function for removing methods
  */
@@ -77,5 +84,6 @@ module.exports = {
     addNote: addNote,
     getAll: getAll,
     getNote: getNote,
-    removeNote: removeNote
+    removeNote: removeNote,
+    logNote:logNote
 }
