@@ -59,7 +59,6 @@ var getNote = (title) => {
 
 var logNote = (note) =>{
     //adding a debugger for testing repl
-    debugger;
     console.log('----------');
     console.log(`Title: ${note.title} Body: ${note.body}`);
 }
