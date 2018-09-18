@@ -9,7 +9,7 @@ console.log(square(31));
 var user = {
     name:'Emdad',
     sayHi: () =>{
-        console.log(arguments);
+        console.log(arguments); //gives the global rapper object
         console.log(`Hi. I'm ${this.name}`);
     },
     /**
@@ -17,7 +17,7 @@ var user = {
      * this is a regular expression function
      */
     sayHiAlt() {
-        console.log(arguments);
+        console.log(arguments); // gives the passed array elements
         console.log(`Hi. I'm ${this.name}`);
 }
 };
