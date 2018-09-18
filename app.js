@@ -55,7 +55,7 @@ if (command == 'add') {
     notes.getAll();
 } else if (command === 'read') {
     var note = notes.getNote(argv.title);
-    var noteRead = note ? 'Note Read' : 'Not Not Found';
+    var noteRead = note ? ('title :'+note.title+'\n' + 'Body : '+note.body) : 'Not Not Found';
     console.log(noteRead)
 
 }
