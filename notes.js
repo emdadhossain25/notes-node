@@ -50,7 +50,10 @@ var getAll = () => {
  * function for calling getting read
  */
 var getNote = (title) => {
-    console.log('getting note', title);
+    var note = fetchNotes();
+    var readNotes = note.filter((note) => note.title === title);
+        return readNotes[0]
+
 }
 
 

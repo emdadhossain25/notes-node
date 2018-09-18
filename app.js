@@ -54,7 +54,10 @@ if (command == 'add') {
 } else if (command == 'list') {
     notes.getAll();
 } else if (command === 'read') {
-    notes.getNote(argv.title);
+    var note = notes.getNote(argv.title);
+    var noteRead = note ? 'Note Read' : 'Not Not Found';
+    console.log(noteRead)
+
 }
 else if (command === 'remove') {
     var note = notes.removeNote(argv.title);
