@@ -65,6 +65,7 @@ var removeNote = (title) => {
     // save new notes array
     saveNotes(filteredNotes);
 
+    // returs true or false to print message a note was removed or note
     return fetched_notes.length!==filteredNotes.length
 }
 
