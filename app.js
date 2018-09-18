@@ -45,17 +45,22 @@ if (command == 'add') {
 
     var note = notes.addNote(argv.title, argv.body);
 
-    if (note!==undefined){
+    if (note !== undefined) {
 
         notes.logNote(note);
-    }else
+    } else
         console.log("No note was added")
 
 } else if (command == 'list') {
-    notes.getAll();
+    var allNotes = notes.getAll();
+    console.log(`Printing ${allNotes.length} note(s).`)
+    allNotes.forEach((note) =>{
+        console.log('title '+note.title+ ' body '+note.body);
+    })
+
 } else if (command === 'read') {
     var note = notes.getNote(argv.title);
-    var noteRead = note ? ('title :'+note.title+'\n' + 'Body : '+note.body) : 'Not Not Found';
+    var noteRead = note ? ('title :' + note.title + '\n' + 'Body : ' + note.body) : 'Not Not Found';
     console.log(noteRead)
 
 }
